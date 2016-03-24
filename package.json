@@ -1,0 +1,19 @@
+{
+  "name": "right-pad",
+  "version": "1.0.0",
+  "description": "Make math utility functions great again",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachlatta/right-pad.git"
+  },
+  "author": "Zach Latta <zach@zachlatta.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachlatta/right-pad/issues"
+  },
+  "homepage": "https://github.com/zachlatta/right-pad#readme"
+}

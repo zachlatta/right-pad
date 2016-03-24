@@ -13,7 +13,7 @@ _apt_ implementations. right-pad, like
 ```js
 require('right-pad');
 
-Math.floor(10.5)
+Math.floor(10.5);
 // =>
 //     │
 //     │
@@ -22,7 +22,7 @@ Math.floor(10.5)
 //     │
 //     └─────10.5─────
 
-Math.ceil(10.5)
+Math.ceil(10.5);
 // =>
 //     ┌─────10.5─────
 //     │
@@ -31,7 +31,7 @@ Math.ceil(10.5)
 //     │
 //     │
 
-Math.round(10.5)
+Math.round(10.5);
 // =>            x x x x x
 //           x x           x x
 //         x                   x

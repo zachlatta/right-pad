@@ -1,5 +1,16 @@
 # right-pad
 
+```js
+Math.floor(10.5);
+// =>
+//     │
+//     │
+//     │
+//     │
+//     │
+//     └─────10.5─────
+```
+
 right-pad replaces `Math.floor`, `Math.ceil`, and `Math.round` with much more
 _apt_ implementations. right-pad, like
 [left-pad](https://github.com/azer/left-pad) may break your dependencies.

@@ -8,7 +8,7 @@ const repeatString = (string, times) => {
   return accumulator;
 };
 
-const paddingCount = 4;
+const paddingCount = 5;
 const middlePadding = repeatString("-", paddingCount);
 const bottomPadding = repeatString("_", paddingCount);
 const bottomLeftCorner = "|_";

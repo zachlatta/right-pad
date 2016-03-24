@@ -16,13 +16,14 @@ const topLeftCorner = "┌";
 const side = "│";
 const circleEdge = "x";
 const verticalHorizontalRatio = 3;
+const newline = require("os").EOL;
 
 Math.floor = function (n) {
   let bottom = bottomLeftCorner + bottomPadding + n + bottomPadding;
   let wall = "";
 
   for (var i = 0; i < (bottom.length/verticalHorizontalRatio); i++) {
-    wall += side + "\n";
+    wall += side + newline;
   }
 
   return wall + bottom;
@@ -33,7 +34,7 @@ Math.ceil = function (n) {
   let wall = "";
 
   for (let i = 0; i < (top.length/verticalHorizontalRatio); i++) {
-    wall += "\n" + side;
+    wall += newline + side;
   }
 
   return top + wall;
@@ -93,7 +94,7 @@ Math.round = function (n) {
       str += a[x][y] + " ";
     }
 
-    str += "\n";
+    str += newline;
   }
 
   return str;

@@ -64,3 +64,5 @@ Math.round(10.5);
 
 right-pad is licensed under the MIT license. See [`LICENSE`](LICENSE) for the
 full text.
+
+This was a late night, sleep deprived idea of [Michael Hulet](https://github.com/raysarebest)

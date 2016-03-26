@@ -1,6 +1,6 @@
 'use strict';
 
-const repeatString = (string, times) => {
+const repeatString = function(string, times) {
   let accumulator = "";
   for(let i = 0; i < times; ++i){
     accumulator += string;
@@ -8,21 +8,21 @@ const repeatString = (string, times) => {
   return accumulator;
 };
 
+const newline = require("os").EOL;
 const paddingCount = 5;
-const middlePadding = repeatString("-", paddingCount);
+const middlePadding = repeatString("_", paddingCount);
 const bottomPadding = repeatString("_", paddingCount);
-const bottomLeftCorner = "|_";
-const topLeftCorner = "┌";
+const bottomLeftCorner = "|";
+const topLeftCorner = "_";
 const side = "│";
 const circleEdge = "x";
 const verticalHorizontalRatio = 3;
-const newline = require("os").EOL;
 
 Math.floor = function (n) {
   let bottom = bottomLeftCorner + bottomPadding + n + bottomPadding;
   let wall = "";
 
-  for (var i = 0; i < (bottom.length/verticalHorizontalRatio); i++) {
+  for (let i = 0; i < (bottom.length/verticalHorizontalRatio); i++) {
     wall += side + newline;
   }
 
@@ -33,7 +33,7 @@ Math.ceil = function (n) {
   let top = topLeftCorner + middlePadding + n + middlePadding;
   let wall = "";
 
-  for (let i = 0; i < (top.length/verticalHorizontalRatio); i++) {
+  for (let i = 0; i < (top.length/verticalHorizontalRatio) + 1; i++) {
     wall += newline + side;
   }
 

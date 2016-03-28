@@ -6,6 +6,19 @@ const topLeftCorner = "┌";
 const side = "│";
 const circleEdge = "x";
 const verticalHorizontalRatio = 3;
+const powPlacementIndexdex = 2;
+const powBufferString = " ";
+const powCharacterArray = [
+
+  "       ,--.--._",
+  "------\" _, \\___)",
+  "  POW!  / _/____)" + powBufferString + powBufferString + "(" + powBufferString,
+  "        \\//(____)",
+  "------\\     (__)",
+  "       `-----\"",
+
+];
+
 
 Math.floor = function (n) {
   let bottom = bottomLeftCorner + padding + n + padding;
@@ -87,4 +100,21 @@ Math.round = function (n) {
   }
 
   return str;
+}
+
+Math.pow = function (n) {
+
+  let str = "";
+
+  for(let i = 0; i < powCharacterArray.length; i++) {
+    str += powCharacterArray[i];
+
+    if(i == powPlacementIndexdex)
+      str += n + powBufferString + ")";
+
+    str += "\n";
+  }
+
+  return str;
+
 }

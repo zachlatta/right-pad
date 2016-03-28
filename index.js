@@ -40,7 +40,7 @@ Math.floor = function (n) {
   }
 
   return wall + bottom;
-}
+};
 
 Math.ceil = function (n) {
   let top = topLeftCorner + middlePadding + n + middlePadding;
@@ -51,7 +51,7 @@ Math.ceil = function (n) {
   }
 
   return top + wall;
-}
+};
 
 Math.round = function (n) {
   let radius = paddingCount + parseInt(n.toString().length/2)+1;
@@ -111,10 +111,9 @@ Math.round = function (n) {
   }
 
   return str;
-}
+};
 
 Math.pow = function (n) {
-
   let str = "";
 
   for(let i = 0; i < powCharacterArray.length; i++) {
@@ -127,5 +126,4 @@ Math.pow = function (n) {
   }
 
   return str;
-
-}
+};

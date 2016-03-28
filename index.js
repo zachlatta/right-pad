@@ -1,36 +1,47 @@
 'use strict';
 
-const padding = "────";
-const bottomLeftCorner = "└";
-const topLeftCorner = "┌";
+const repeatString = function(string, times) {
+  let accumulator = "";
+  for(let i = 0; i < times; ++i){
+    accumulator += string;
+  }
+  return accumulator;
+};
+
+const newline = require("os").EOL;
+const paddingCount = 5;
+const middlePadding = repeatString("_", paddingCount);
+const bottomPadding = repeatString("_", paddingCount);
+const bottomLeftCorner = "|";
+const topLeftCorner = "_";
 const side = "│";
 const circleEdge = "x";
 const verticalHorizontalRatio = 3;
 
 Math.floor = function (n) {
-  let bottom = bottomLeftCorner + padding + n + padding;
+  let bottom = bottomLeftCorner + bottomPadding + n + bottomPadding;
   let wall = "";
 
-  for (var i = 0; i < (bottom.length/verticalHorizontalRatio); i++) {
-    wall += side + "\n";
+  for (let i = 0; i < (bottom.length/verticalHorizontalRatio); i++) {
+    wall += side + newline;
   }
 
   return wall + bottom;
 }
 
 Math.ceil = function (n) {
-  let top = topLeftCorner + padding + n + padding;
+  let top = topLeftCorner + middlePadding + n + middlePadding;
   let wall = "";
 
-  for (let i = 0; i < (top.length/verticalHorizontalRatio); i++) {
-    wall += "\n" + side;
+  for (let i = 0; i < (top.length/verticalHorizontalRatio) + 1; i++) {
+    wall += newline + side;
   }
 
   return top + wall;
 }
 
 Math.round = function (n) {
-  let radius = padding.length + parseInt(n.toString().length/2)+1;
+  let radius = paddingCount + parseInt(n.toString().length/2)+1;
 
   let a = new Array(radius * 2 + 1);
   for (let i = 0; i < a.length; i++) {
@@ -83,7 +94,7 @@ Math.round = function (n) {
       str += a[x][y] + " ";
     }
 
-    str += "\n";
+    str += newline;
   }
 
   return str;

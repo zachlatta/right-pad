@@ -12,7 +12,7 @@ Math.floor(10.5);
 //     │
 //     │
 //     │
-//     └─────10.5─────
+//     |_____10.5_____
 ```
 
 ## Install
@@ -31,11 +31,12 @@ Math.floor(10.5);
 //     │
 //     │
 //     │
-//     └─────10.5─────
+//     |_____10.5_____
 
 Math.ceil(10.5);
 // =>
-//     ┌─────10.5─────
+//     _____10.5_____
+//     |
 //     │
 //     │
 //     │
@@ -64,3 +65,5 @@ Math.round(10.5);
 
 right-pad is licensed under the MIT license. See [`LICENSE`](LICENSE) for the
 full text.
+
+This was a late night, sleep deprived idea of [Michael Hulet](https://github.com/raysarebest)

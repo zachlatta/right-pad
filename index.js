@@ -9,6 +9,7 @@ const repeatString = function(string, times) {
 };
 
 const AbsBuilder = function() {
+  // Need to use ES 6 to get 6 pack
   return `                      ,▄▓▓▓▓▓▓▓▓▓▓▓▓▒░░╬Θ░⌂    ░░░░-                            
                    ,▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▌╣╣░░░░⌂ ░░░░░░░░░░░░░⌐                     
                 ╓▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒╣░░░░░░ ░░░░░░░⌂    '░░░                   

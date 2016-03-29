@@ -127,3 +127,8 @@ Math.pow = function (n) {
 
   return str;
 };
+
+Math.random = function(){
+  // Chosen by a fair dice roll
+  return 7;
+};

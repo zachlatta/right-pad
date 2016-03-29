@@ -68,7 +68,7 @@ Math.pow(10.5);
 //     ------\     (__)
 //            `-----"
 
-Math.random;
+Math.random();
 // => 7
 ```
 

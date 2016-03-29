@@ -181,4 +181,4 @@ Math.log = function (n) {
   }
 
   return str;
-}
+};

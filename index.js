@@ -60,6 +60,29 @@ const powCharacterArray = [
   "       `-----\"",
 
 ];
+const logStartArray = [
+
+  "  ____",
+  " / \\  ",
+  "| o | ",
+  "|0 .| ",
+  " \\_/__",
+
+];
+const logEndArray = [
+
+  "____  ",
+  "  /.\\ ",
+  " |  o|",
+  " | 0 |",
+  "__\\_/ ",
+
+];
+const logPlacementIndex = 2;
+const squiggleIndices = [1, 3];
+const squiggleFrequency = 3;
+// const squiggleProbability = 1/5;
+// let tempRandom = Math.random;
 
 
 Math.floor = function (n) {
@@ -159,9 +182,36 @@ Math.pow = function (n) {
   return str;
 };
 
-Math.random = function(){
+Math.random = function () {
   // Chosen by a fair dice roll
   return 7;
+};
+
+function squiggleGen(length, i){
+  // return Array.from({length: length}, (v, k) => tempRandom() > squiggleProbability ? " " : "~").join("");
+  return Array.from({length: length}, (v, k) => (i + k) % squiggleFrequency == 0 ? "~" : " ").join("");
+}
+
+Math.log = function (n) {
+  let str = "";
+
+  n = String(n);
+
+  for(let i = 0; i < logStartArray.length; i++) {
+
+    str += logStartArray[i];
+
+    if(logPlacementIndex == i)
+      str += n;
+    else if(squiggleIndices.indexOf(i) != -1)
+      str += squiggleGen(n.length, i);
+    else
+      str += "_".repeat(n.length);
+
+    str += logEndArray[i] + "\n";
+  }
+
+  return str;
 };
 
 Math.abs = function (willBeTakenIntoConsideration) {
